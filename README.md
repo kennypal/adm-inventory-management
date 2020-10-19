@@ -44,9 +44,9 @@ _**ADM Inventory Management** is an app that lists medications from an Automated
 
 > Use the Wireframes section to display desktop, tablet and mobile views. No hand-drawn wireframes. Use a tool like wireframe.cc, Whimsical or AdobeXD
 
-![Dummy Link](url)
+![imageAlt](https://i.imgur.com/x01LzQs.png)
 
-- Desktop Landing
+- Desktop/Tablet
 
 ![Dummy Link](url)
 
@@ -70,7 +70,7 @@ _**ADM Inventory Management** is an app that lists medications from an Automated
 
 #### Component Tree
 
-(https://whimsical.com/KXyyfGHYzTMo2tmEHVLn2C)
+https://whimsical.com/KXyyfGHYzTMo2tmEHVLn2C
 
 #### Component Hierarchy
 
