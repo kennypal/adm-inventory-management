@@ -1,3 +1,3 @@
 class Medication < ApplicationRecord
-  belongs_to :device
+  has_and_belongs_to_many :devices
 end

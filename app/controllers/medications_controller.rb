@@ -3,9 +3,10 @@ class MedicationsController < ApplicationController
 
   # GET /medications
   def index
-    @medications = Medication.all
+    @device = Device.find(params[:device_id])
+    # @medications = Medication.all
 
-    render json: @medications
+    render json: @device.medications
   end
 
   # GET /medications/1
@@ -16,12 +17,14 @@ class MedicationsController < ApplicationController
   # POST /medications
   def create
     @medication = Medication.new(medication_params)
+    @medication.save
+    @device = Device.find(params[:device_id])
+    @medication.devices << @device
 
-    if @medication.save
-      render json: @medication, status: :created, location: @medication
-    else
-      render json: @medication.errors, status: :unprocessable_entity
-    end
+      render json: @medication, status: :created
+    # else
+    #   render json: @medication.errors, status: :unprocessable_entity
+    
   end
 
   # PATCH/PUT /medications/1

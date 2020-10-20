@@ -1,5 +1,5 @@
 class Device < ApplicationRecord
   belongs_to :hospital
 
-  has_many :medications
+  has_and_belongs_to_many :medications
 end
