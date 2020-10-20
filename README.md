@@ -114,7 +114,7 @@ src
 
 #### ERD Model
 
-![imageAlt](https://i.imgur.com/WOShuew.png)
+![imageAlt](https://i.imgur.com/jKVuUGW.png)
 
 <br>
 
