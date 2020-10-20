@@ -7,7 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-# Medication.destroy_all
+Medication.destroy_all
 Device.destroy_all
 Hospital.destroy_all
 
@@ -20,4 +20,16 @@ puts "#{Hospital.count} hospitals created"
 @north = Device.create(name: 'North', hospital: @hospital)
 @potter = Device.create(name: 'Potter', hospital: @hospital)
 puts "#{Device.count} devices created"
+
+@acetaminophen = Medication.create(description: 'Acetaminophen 325mg Tab', par_level: '200', quantity_on_hand: '100', device: [@gardner, @hoag, @main, @north, @potter])
+@albuterol = Medication.create(description: 'Albuterol 2.5mg/3ml Inh Soln', par_level: '30', quantity_on_hand: '20', device: @hoag)
+@polyethylene = Medication.create(description: 'Polyethylene Glycol 3350 Powder Pkt', par_level: '30', quantity_on_hand: '15', device: [@hoag, @main, @north])
+@ondansetron = Medication.create(description: 'Ondansetron 2mg/ml Inj', par_level: '10', quantity_on_hand: '10', device: [@gardner, @hoag, @north, @potter])
+@heparin = Medication.create(description: 'Heparin 5mg/ml Inj', par_level: '50', quantity_on_hand: '25', device: [@hoag, @main, @north, @potter])
+@oxycodone = Medication.create(description: 'Oxycodone 5mg Tab', par_level: '50', quantity_on_hand: '50', device: [@hoag, @north, @potter])
+@morphine = Medication.create(description: 'Morphine 2mg/ml Syr', par_level: '30', quantity_on_hand: '20', device: [@hoag, @north, @potter])
+@hydromorphone = Medication.create(description: 'Hydromorphone 2mg/ml Inj', par_level: '10', quantity_on_hand: '10', device: [@north, @potter])
+@enoxaparin = Medication.create(description: 'Enoxaparin 40mg/0.4ml Syr', par_level: '50', quantity_on_hand: '25', device: [@gardner, @hoag, @main, @north, @potter])
+@fentanyl = Medication.create(description: 'Fentanyl 100mcg/2ml Inj', par_level: '25', quantity_on_hand: '20', device: [@hoag, @north, @potter])
+puts "#{Medication.count} medications created"
 

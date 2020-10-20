@@ -11,7 +11,7 @@ class DevicesController < ApplicationController
 
   # GET /devices/1
   def show
-    render json: @device include: :medications
+    render json: @device
   end
 
   # POST /devices
