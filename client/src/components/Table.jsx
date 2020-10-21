@@ -1,10 +1,11 @@
 import React, { useState, useEffect }  from 'react'
 import { getAllDevices } from '../services/devices'
-// import { getAllMedsFromDevice } from './../services/medications'
+import { getAllMedsFromDevice } from './../services/medications'
 
 export default function Table() {
   const [devices, setDevices] = useState([])
-  // const [meds, setMeds] = useState([])
+  const [id, setId] = useState(null)
+  const [meds, setMeds] = useState([])
 
   useEffect(() => {
     const fetchDevices = async () => {
@@ -14,27 +15,43 @@ export default function Table() {
     fetchDevices()
   }, [])
 
-  // useEffect(() => {
-  // const fetchMeds = async (id) => {
-  //     const getMeds = await getAllMedsFromDevice(id)
-  //     setMeds(getMeds)
-  //   }
-  //   fetchMeds()
-  // }, [])
+  useEffect(() => {
+  const fetchMeds = async () => {
+      const getMeds = await getAllMedsFromDevice(id)
+      setMeds(getMeds)
+    }
+    if (id) {
+      fetchMeds()
+    }
+  }, [id])
 
   const deviceJSX = devices.map(device => {
     return (
-      <option value={device.name} key={device.id}>{device.name}</option>
+      <option value={device.id} key={device.id}>{device.name}</option>
     )
+    
   })
+
+  const handleChange = (e) => {
+    const { value } = e.target
+    setId(value)
+  }
 
   return (
     <div>
       <label htmlFor="devices">Device: &nbsp;</label>
 
-      <select name="devices" id="devices">
+      <select name="devices" id="devices" defaultValue="default" onChange={handleChange}>
+        <option disabled value="default">--Select a device--</option>
         {deviceJSX}
       </select>
+      {meds.map(med => (
+        <div key={med.id}>
+          <p>{med.description}</p>
+          <p>{med.par_level}</p>
+          <p>{med.quantity_on_hand}</p>
+        </div>
+      ))}
     </div>
   )
 }
