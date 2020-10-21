@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react'
-import { useParams } from 'react-router-dom'
 import { getAllHospitals } from './../services/hospitals'
 
 export default function Header() {
@@ -12,7 +11,7 @@ export default function Header() {
     }
     fetchHospital()
   }, [])
-  
+
   return (
     <div>
       <h1>{hospital.name}</h1>
