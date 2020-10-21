@@ -1,8 +1,10 @@
 import React, { useState, useEffect }  from 'react'
-import { getAllDevices } from './../services/devices'
+import { getAllDevices } from '../services/devices'
+// import { getAllMedsFromDevice } from './../services/medications'
 
-export default function Dropdown() {
+export default function Table() {
   const [devices, setDevices] = useState([])
+  // const [meds, setMeds] = useState([])
 
   useEffect(() => {
     const fetchDevices = async () => {
@@ -11,6 +13,14 @@ export default function Dropdown() {
     }
     fetchDevices()
   }, [])
+
+  // useEffect(() => {
+  // const fetchMeds = async (id) => {
+  //     const getMeds = await getAllMedsFromDevice(id)
+  //     setMeds(getMeds)
+  //   }
+  //   fetchMeds()
+  // }, [])
 
   const deviceJSX = devices.map(device => {
     return (

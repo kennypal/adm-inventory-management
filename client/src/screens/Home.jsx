@@ -1,14 +1,17 @@
 import React from 'react'
-import Header from './../layouts/Header'
-import Dropdown from './../components/Dropdown'
+import Layout from './../layouts/Header'
+import Table from '../components/Table'
+
 
 
 export default function Home() {
+
+  
   
   return (
     <div>
-      <Header />
-      <Dropdown />
+      <Layout />
+        <Table />
     </div>
   )
 }
