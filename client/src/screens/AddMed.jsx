@@ -11,8 +11,8 @@ export default function AddMed() {
   const [meds, setMeds] = useState([])
   const [medData, setMedData] = useState({
     description: '',
-    parLevel: '',
-    quantityOnHand: ''
+    par_level: '',
+    quantity_on_hand: ''
   })
 
   // useEffect(() => {
@@ -58,8 +58,8 @@ export default function AddMed() {
               Par Level:
             <input
                 type="text"
-                name="parLevel"
-                value={medData.parLevel}
+                name="par_level"
+                value={medData.par_level}
                 onChange={handleChange}
               />
             </label>
@@ -67,8 +67,8 @@ export default function AddMed() {
               Quantity On Hand:
             <input
                 type="text"
-                name="quantityOnHand"
-                value={medData.quantityOnHand}
+                name="quantity_on_hand"
+                value={medData.quantity_on_hand}
                 onChange={handleChange}
               />
             </label>
