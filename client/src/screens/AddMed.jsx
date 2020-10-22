@@ -5,8 +5,8 @@ import { postMedToDevice } from './../services/medications'
 // import { getAllDevices } from './../services/devices'
 
 export default function AddMed() {
-  const history = useHistory;
-  const { id } = useParams;
+  const history = useHistory();
+  const { id } = useParams();
   // const [devices, setDevices] = useState([])
   const [meds, setMeds] = useState([])
   const [medData, setMedData] = useState({
