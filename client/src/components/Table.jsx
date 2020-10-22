@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
+import { Link, Route } from 'react-router-dom';
 import { getAllDevices } from "../services/devices";
 import { getAllMedsFromDevice } from "./../services/medications";
+import AddMed from './../screens/AddMed'
 
 export default function Table() {
   const [devices, setDevices] = useState([]);
@@ -88,7 +90,9 @@ export default function Table() {
         </thead>
         <tbody>{renderBody()}</tbody>
       </table>
-
+      <Link to={`/${id}/add`}>
+        <button>Add</button>
+      </Link>
       {/* {meds.map((med) => (
         <div key={med.id}>
           <p>{med.description}</p>
@@ -96,6 +100,7 @@ export default function Table() {
           <p>{med.quantity_on_hand}</p>
         </div>
       ))} */}
+      
     </div>
   );
 }
