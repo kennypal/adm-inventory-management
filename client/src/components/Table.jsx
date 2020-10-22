@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { getAllDevices } from "../services/devices";
 import { getAllMedsFromDevice } from "./../services/medications";
 
+
 export default function Table(props) {
   const [devices, setDevices] = useState([]);
   const [id, setId] = useState(null);
@@ -64,7 +65,7 @@ export default function Table(props) {
               <button>Delete</button>
           </td>
           <td>
-            <Link to={`/${id}/edit`}>
+            <Link to={`/${id}/edit/`}>
               <button>Edit</button>
             </Link>
           </td>
@@ -96,15 +97,7 @@ export default function Table(props) {
       </table>
       <Link to={`/${id}/add`}>
         <button>Add</button>
-      </Link>
-      {/* {meds.map((med) => (
-        <div key={med.id}>
-          <p>{med.description}</p>
-          <p>{med.par_level}</p>
-          <p>{med.quantity_on_hand}</p>
-        </div>
-      ))} */}
-      
-    </div>
+      </Link> 
+      </div>
   );
 }

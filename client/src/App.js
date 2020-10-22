@@ -15,7 +15,7 @@ function App() {
       <Route path='/:id/add'>
         <AddMed />
       </Route>
-      <Route path='/:id/edit'>
+      <Route path='/:id/edit/:medication_id'>
         <EditMed />
       </Route>
     </div>
