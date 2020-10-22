@@ -5,6 +5,7 @@ import Home from './screens/Home'
 import AddMed from './screens/AddMed'
 
 function App() {
+
   return (
     <div className="App">
       <Route exact path='/'>

@@ -1,10 +1,9 @@
-import React, { useState, useEffect } from "react";
-import { Link, Route } from 'react-router-dom';
+import React, { useEffect, useState } from "react";
+import { Link } from 'react-router-dom';
 import { getAllDevices } from "../services/devices";
 import { getAllMedsFromDevice } from "./../services/medications";
-import AddMed from './../screens/AddMed'
 
-export default function Table() {
+export default function Table(props) {
   const [devices, setDevices] = useState([]);
   const [id, setId] = useState(null);
   const [meds, setMeds] = useState([]);
