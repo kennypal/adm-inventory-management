@@ -3,6 +3,7 @@ import { Route } from 'react-router-dom';
 import './App.css';
 import Home from './screens/Home'
 import AddMed from './screens/AddMed'
+import EditMed from './screens/EditMed'
 
 function App() {
 
@@ -13,6 +14,9 @@ function App() {
       </Route>
       <Route path='/:id/add'>
         <AddMed />
+      </Route>
+      <Route path='/:id/edit'>
+        <EditMed />
       </Route>
     </div>
   );

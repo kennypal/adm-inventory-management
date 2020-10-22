@@ -60,9 +60,14 @@ export default function Table(props) {
           <td>{med.description}</td>
           <td>{med.par_level}</td>
           <td>{med.quantity_on_hand}</td>
-          {/* <td className='opration'>
-                    <button onClick={() => removeData(id)}>Delete</button>
-                </td> */}
+          <td>
+              <button>Delete</button>
+          </td>
+          <td>
+            <Link to={`/${id}/edit`}>
+              <button>Edit</button>
+            </Link>
+          </td>
         </tr>
       );
     });
