@@ -6,7 +6,7 @@ import { getAllMedsFromDevice } from "./../services/medications";
 
 export default function Table(props) {
   const [devices, setDevices] = useState([]);
-  const [id, setId] = useState(null);
+  const [deviceId, setDeviceId] = useState(null);
   const [meds, setMeds] = useState([]);
 
   useEffect(() => {
@@ -19,13 +19,13 @@ export default function Table(props) {
 
   useEffect(() => {
     const fetchMeds = async () => {
-      const getMeds = await getAllMedsFromDevice(id);
+      const getMeds = await getAllMedsFromDevice(deviceId);
       setMeds(getMeds);
     };
-    if (id) {
+    if (deviceId) {
       fetchMeds();
     }
-  }, [id]);
+  }, [deviceId]);
 
   const deviceJSX = devices.map((device) => {
     return (
@@ -37,7 +37,7 @@ export default function Table(props) {
 
   const handleChange = (e) => {
     const { value } = e.target;
-    setId(value);
+    setDeviceId(value);
   };
 
   const renderHeader = () => {
@@ -65,7 +65,7 @@ export default function Table(props) {
               <button>Delete</button>
           </td>
           <td>
-            <Link to={`/${id}/edit/`}>
+            <Link to={`/${deviceId}/edit/${med.id}`}>
               <button>Edit</button>
             </Link>
           </td>
@@ -95,7 +95,7 @@ export default function Table(props) {
         </thead>
         <tbody>{renderBody()}</tbody>
       </table>
-      <Link to={`/${id}/add`}>
+      <Link to={`/${deviceId}/add`}>
         <button>Add</button>
       </Link> 
       </div>
