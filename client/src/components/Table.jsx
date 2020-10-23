@@ -66,6 +66,8 @@ export default function Table(props) {
             <DeleteMed
               deviceId={deviceId}
               medicationId={med.id}
+              meds={meds}
+              setMeds={setMeds}
             />
           </td>
           <td>
