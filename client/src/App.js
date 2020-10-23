@@ -4,11 +4,13 @@ import './App.css';
 import Home from './screens/Home'
 import AddMed from './screens/AddMed'
 import EditMed from './screens/EditMed'
+import Layout from './layouts/Layout'
 
 function App() {
 
   return (
     <div className="App">
+      <Layout>
       <Route exact path='/'>
         <Home />
       </Route>
@@ -17,7 +19,8 @@ function App() {
       </Route>
       <Route path='/:device_id/edit/:medication_id'>
         <EditMed />
-      </Route>
+        </Route>
+        </Layout>
     </div>
   );
 }
