@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link } from 'react-router-dom';
 import { getAllDevices } from "../services/devices";
 import { getAllMedsFromDevice } from "./../services/medications";
+import DeleteMed from './DeleteMed'
 
 
 export default function Table(props) {
@@ -62,7 +63,10 @@ export default function Table(props) {
           <td>{med.par_level}</td>
           <td>{med.quantity_on_hand}</td>
           <td>
-              <button>Delete</button>
+            <DeleteMed
+              deviceId={deviceId}
+              medicationId={med.id}
+            />
           </td>
           <td>
             <Link to={`/${deviceId}/edit/${med.id}`}>
