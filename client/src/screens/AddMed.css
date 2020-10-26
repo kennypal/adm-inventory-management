@@ -11,6 +11,10 @@ input {
   padding: 10px;
 }
 
+.add-button {
+  margin-left: 10px;
+}
+
 .add-form-container {
   margin: 10px;
   font-size: 20px;
@@ -26,4 +30,16 @@ input {
 .add-qoh {
   color: rgb(75, 116, 147);
   margin: 10px;
+}
+
+@media all and (min-width: 480px) and (max-width: 768px) {
+  .add-button {
+    margin-left: 10px;
+  }
+}
+
+@media all and (max-width: 480px) {
+  .add-button {
+    margin-left: 10px;
+  }
 }

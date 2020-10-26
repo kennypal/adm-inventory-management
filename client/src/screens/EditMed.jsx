@@ -88,7 +88,7 @@ export default function EditMed() {
               </label>
             </div>
           </div>
-          <button>Edit</button>
+          <button className="edit-button">Edit</button>
         </form>
       </div>
     </div>

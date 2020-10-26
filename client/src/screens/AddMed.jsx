@@ -72,7 +72,7 @@ export default function AddMed() {
               </label>
             </div>
           </div>
-          <button>Add</button>
+          <button className="add-button">Add</button>
         </form>
       </div>
     </div>

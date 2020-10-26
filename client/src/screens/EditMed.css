@@ -11,6 +11,11 @@ input {
   padding: 10px;
 }
 
+.edit-button {
+  margin-left: 10px;
+  padding-left: 10px;
+}
+
 .edit-form-container {
   margin: 10px;
   font-size: 20px;
@@ -26,4 +31,18 @@ input {
 .edit-qoh {
   color: rgb(75, 116, 147);
   margin: 10px;
+}
+
+@media all and (min-width: 480px) and (max-width: 768px) {
+  .edit-button {
+    margin-left: 10px;
+    padding-left: 10px;
+  }
+}
+
+@media all and (max-width: 480px) {
+  .edit-button {
+    margin-left: 10px;
+    padding-left: 25px;
+  }
 }
