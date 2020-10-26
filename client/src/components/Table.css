@@ -97,3 +97,17 @@ th:last-child {
   display: flex;
   justify-content: center;
 }
+
+@media all and (min-width: 480px) and (max-width: 768px) {
+  select {
+    font-size: 24px;
+  }
+
+  .add-container {
+    margin-right: 185px;
+  }
+
+  .dropdown {
+    font-size: 30px;
+  }
+}
