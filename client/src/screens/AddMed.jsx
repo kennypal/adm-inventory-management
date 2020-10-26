@@ -30,52 +30,50 @@ export default function AddMed() {
   return (
     <div>
       <h1>Add Med</h1>
-      <div className="add-form-background">
-        <div className="add-form-container">
-          <form
-            onSubmit={(e) => {
-              e.preventDefault();
-              handleMedCreate(id, medData);
-            }}
-          >
-            <div className="add-input-container">
+      <div className="add-form-container">
+        <form
+          onSubmit={(e) => {
+            e.preventDefault();
+            handleMedCreate(id, medData);
+          }}
+        >
+          <div className="add-input-container">
             <div>
-            <label className="add-description">
-              Description: &nbsp;
-              <input
-                type="text"
-                name="description"
-                value={medData.description}
-                onChange={handleChange}
-              />
+              <label className="add-description">
+                Description: &nbsp;
+                <input
+                  type="text"
+                  name="description"
+                  value={medData.description}
+                  onChange={handleChange}
+                />
               </label>
             </div>
             <div>
-            <label className="add-par">
-              Par Level: &nbsp;
-              <input
-                type="text"
-                name="par_level"
-                value={medData.par_level}
-                onChange={handleChange}
-              />
+              <label className="add-par">
+                Par Level: &nbsp;
+                <input
+                  type="text"
+                  name="par_level"
+                  value={medData.par_level}
+                  onChange={handleChange}
+                />
               </label>
             </div>
             <div>
-            <label className="add-qoh">
-              Quantity On Hand: &nbsp;
-              <input
-                type="text"
-                name="quantity_on_hand"
-                value={medData.quantity_on_hand}
-                onChange={handleChange}
-              />
+              <label className="add-qoh">
+                Quantity On Hand: &nbsp;
+                <input
+                  type="text"
+                  name="quantity_on_hand"
+                  value={medData.quantity_on_hand}
+                  onChange={handleChange}
+                />
               </label>
-              </div>
-              </div>
-            <button>Add</button>
-          </form>
-        </div>
+            </div>
+          </div>
+          <button>Add</button>
+        </form>
       </div>
     </div>
   );

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useHistory, useParams } from "react-router-dom";
 import { putMedToDevice, getMedFromDevice } from "../services/medications";
+import './EditMed.css'
 
 export default function EditMed() {
   const history = useHistory();
@@ -42,44 +43,54 @@ export default function EditMed() {
   return (
     <div>
       <h1>Edit Med</h1>
-      <form
-        onSubmit={(e) => {
-          e.preventDefault();
-          handleMedUpdate(device_id, medication_id, medData);
-        }}
-      >
-        <label>
-          Description:
-          <input
-            type="text"
-            name="description"
-            placeholder=""
-            value={medData.description}
-            onChange={handleChange}
-          />
-        </label>
-        <label>
-          Par Level:
-          <input
-            type="text"
-            name="par_level"
-            placeholder=""
-            value={medData.par_level}
-            onChange={handleChange}
-          />
-        </label>
-        <label>
-          Quantity On Hand:
-          <input
-            type="text"
-            name="quantity_on_hand"
-            placeholder=""
-            value={medData.quantity_on_hand}
-            onChange={handleChange}
-          />
-        </label>
-        <button>Edit</button>
-      </form>
+      <div className="edit-form-container">
+        <form
+          onSubmit={(e) => {
+            e.preventDefault();
+            handleMedUpdate(device_id, medication_id, medData);
+          }}
+        >
+          <div className="edit-input-container">
+            <div>
+              <label className="edit-description">
+                Description: &nbsp;
+                <input
+                  type="text"
+                  name="description"
+                  placeholder=""
+                  value={medData.description}
+                  onChange={handleChange}
+                />
+              </label>
+            </div>
+            <div>
+              <label className="edit-par">
+                Par Level: &nbsp;
+                <input
+                  type="text"
+                  name="par_level"
+                  placeholder=""
+                  value={medData.par_level}
+                  onChange={handleChange}
+                />
+              </label>
+            </div>
+            <div>
+              <label className="edit-qoh">
+                Quantity On Hand: &nbsp;
+                <input
+                  type="text"
+                  name="quantity_on_hand"
+                  placeholder=""
+                  value={medData.quantity_on_hand}
+                  onChange={handleChange}
+                />
+              </label>
+            </div>
+          </div>
+          <button>Edit</button>
+        </form>
+      </div>
     </div>
   );
 }
