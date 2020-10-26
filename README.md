@@ -4,6 +4,10 @@ _**ADM Inventory Management** is an app that lists medications from an Automated
 
 <br>
 
+## Deployed Site
+
+http://kennypal-adm-inv-mgt.surge.sh/
+
 ## MVP
 
 - Gather the medication's description, par level, and quantity on hand with the use of Ruby on Rails.
