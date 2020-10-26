@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { getAllHospitals } from './../services/hospitals'
+import './../layouts/Header.css'
 
 export default function Header() {
   const [hospital, setHospital] = useState([])
@@ -14,9 +15,9 @@ export default function Header() {
   }, [])
 
   return (
-    <div>
+    <div className="header">
       <Link to='/' style={{ textDecoration: "none" }}>
-        <h1>{hospital.name}</h1>
+        <h1 className="header-name">{hospital.name}</h1>
       </Link>
     </div>
   )

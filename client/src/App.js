@@ -1,6 +1,6 @@
 import React from "react";
 import { Route } from "react-router-dom";
-import "./App.css";
+import './App.css'
 import Home from "./screens/Home";
 import AddMed from "./screens/AddMed";
 import EditMed from "./screens/EditMed";

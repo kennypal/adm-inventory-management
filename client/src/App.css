@@ -1,4 +1,11 @@
-.App {
-  
-  text-align: center;
+html {
+  height: 100%
+}
+
+body {
+  background: url("https://i.imgur.com/7YUl2M6.png");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }

@@ -1,0 +1,13 @@
+.header {
+  background: url("https://i.imgur.com/PCxmJFH.png");
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.header-name {
+  font-size: 100px;
+  margin-top: 0;
+  text-align: center;
+  padding: 114px 0;
+}
