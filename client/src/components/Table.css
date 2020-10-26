@@ -1,0 +1,19 @@
+select {
+  border: none;
+  color: rgb(160, 160, 160);
+  font-size: 30px;
+}
+
+.dropdown {
+  background: rgb(255, 255, 255);
+  border-radius: 18px;
+  color: rgb(160, 160, 160);
+  font-size: 40px;
+  padding: 10px 0 10px 50px;
+  width: 30%;
+}
+
+.dropdown-container {
+  display: flex;
+  justify-content: center;
+}

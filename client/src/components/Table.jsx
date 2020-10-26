@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 import { getAllDevices } from "../services/devices";
 import { getAllMedsFromDevice } from "./../services/medications";
-import DeleteMed from './DeleteMed'
-
+import DeleteMed from "./DeleteMed";
+import './Table.css'
 
 export default function Table(props) {
   const [devices, setDevices] = useState([]);
@@ -82,19 +82,23 @@ export default function Table(props) {
 
   return (
     <div>
-      <label htmlFor="devices">Device: &nbsp;</label>
+      <div className="dropdown-container">
+      <div className="dropdown">
+        <label htmlFor="devices">Device: &nbsp;</label>
 
-      <select
-        name="devices"
-        id="devices"
-        defaultValue="default"
-        onChange={handleChange}
-      >
-        <option disabled value="default">
-          --Select a device--
-        </option>
-        {deviceJSX}
-      </select>
+        <select
+          name="devices"
+          id="devices"
+          defaultValue="default"
+          onChange={handleChange}
+        >
+          <option className="devices" disabled value="default">
+            --Select a device--
+          </option>
+          {deviceJSX}
+          </select>
+        </div>
+        </div>
       <table>
         <thead>
           <tr>{renderHeader()}</tr>
@@ -103,7 +107,7 @@ export default function Table(props) {
       </table>
       <Link to={`/${deviceId}/add`}>
         <button>Add</button>
-      </Link> 
-      </div>
+      </Link>
+    </div>
   );
 }
