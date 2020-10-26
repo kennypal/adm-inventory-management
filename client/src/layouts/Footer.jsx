@@ -1,9 +1,10 @@
 import React from 'react'
+import './Footer.css'
 
 export default function Footer() {
   return (
-    <div>
-      <h1>Footer</h1>
+    <div className="footer">
+      <p>This website owned by Kenneth Palces, 2020</p>
     </div>
   )
 }

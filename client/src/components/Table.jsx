@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { getAllDevices } from "../services/devices";
 import { getAllMedsFromDevice } from "./../services/medications";
 import DeleteMed from "./DeleteMed";
-import './Table.css'
+import "./Table.css";
 
 export default function Table(props) {
   const [devices, setDevices] = useState([]);
@@ -47,6 +47,8 @@ export default function Table(props) {
       "description",
       "par level",
       "quantity on hand",
+      "",
+      "",
     ];
 
     return headerElement.map((title, index) => {
@@ -60,9 +62,9 @@ export default function Table(props) {
         <tr key={med.id}>
           <td>{idx + 1}</td>
           <td>{med.description}</td>
-          <td>{med.par_level}</td>
-          <td>{med.quantity_on_hand}</td>
-          <td>
+          <td className="par-level">{med.par_level}</td>
+          <td className="quantity">{med.quantity_on_hand}</td>
+          <td className="delete-button">
             <DeleteMed
               deviceId={deviceId}
               medicationId={med.id}
@@ -70,7 +72,7 @@ export default function Table(props) {
               setMeds={setMeds}
             />
           </td>
-          <td>
+          <td className="edit-button">
             <Link to={`/${deviceId}/edit/${med.id}`}>
               <button>Edit</button>
             </Link>
@@ -83,31 +85,37 @@ export default function Table(props) {
   return (
     <div>
       <div className="dropdown-container">
-      <div className="dropdown">
-        <label htmlFor="devices">Device: &nbsp;</label>
+        <div className="dropdown">
+          <label htmlFor="devices">Device: &nbsp;</label>
 
-        <select
-          name="devices"
-          id="devices"
-          defaultValue="default"
-          onChange={handleChange}
-        >
-          <option className="devices" disabled value="default">
-            --Select a device--
-          </option>
-          {deviceJSX}
+          <select
+            name="devices"
+            id="devices"
+            defaultValue="default"
+            onChange={handleChange}
+          >
+            <option className="devices" disabled value="default">
+              --Select a device--
+            </option>
+            {deviceJSX}
           </select>
         </div>
+      </div>
+      <div className="table-background">
+        <div className="table-container">
+          <table>
+            <thead>
+              <tr>{renderHeader()}</tr>
+            </thead>
+            <tbody>{renderBody()}</tbody>
+          </table>
         </div>
-      <table>
-        <thead>
-          <tr>{renderHeader()}</tr>
-        </thead>
-        <tbody>{renderBody()}</tbody>
-      </table>
-      <Link to={`/${deviceId}/add`}>
-        <button>Add</button>
-      </Link>
+      </div>
+      <div className="add-container">
+        <Link to={`/${deviceId}/add`}>
+          <button className="add-button">Add</button>
+        </Link>
+      </div>
     </div>
   );
 }

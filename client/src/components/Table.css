@@ -1,7 +1,69 @@
+button {
+  background: rgb(75, 116, 147);
+  border: none;
+  border-radius: 5px;
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  padding: 10px;
+}
+
 select {
   border: none;
   color: rgb(160, 160, 160);
   font-size: 30px;
+}
+
+table {
+  border-collapse: separate;
+  border-spacing: 0 1em;
+  color: rgb(75, 116, 147);
+  font-size: 20px;
+  width: 75%;
+  /* border: 3px solid #ddd; */
+}
+
+td {
+  padding: 10px;
+}
+
+th {
+  padding: 5px;
+}
+
+th, td {
+  background: rgb(255, 255, 255);
+}
+
+td:first-child {
+  border-top-left-radius: 5px; 
+  border-bottom-left-radius: 5px;
+}
+td:last-child {
+  border-bottom-right-radius: 5px; 
+  border-top-right-radius: 5px; 
+}
+th:first-child {
+  border-top-left-radius: 5px; 
+  border-bottom-left-radius: 5px;
+}
+th:last-child {
+  border-bottom-right-radius: 5px; 
+  border-top-right-radius: 5px; 
+}
+
+.add-container {
+  margin-right: 289px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.delete-button {
+  text-align: right;
+  padding-right: 2px;
+}
+
+.edit-button {
+  padding-left: 2px;
 }
 
 .dropdown {
@@ -14,6 +76,24 @@ select {
 }
 
 .dropdown-container {
+  display: flex;
+  justify-content: center;
+}
+
+.par-level {
+  text-align: center;
+}
+
+.quantity {
+  text-align: center;
+}
+
+.table-background {
+  background: rgb(218, 218, 218);
+}
+
+.table-container {
+  margin: 10px;
   display: flex;
   justify-content: center;
 }
