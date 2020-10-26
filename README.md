@@ -131,11 +131,54 @@ src
 
 ## Code Showcase
 
-> Use this section to include a brief code snippet of functionality that you are proud of and a brief description.
+```
+const renderHeader = () => {
+    let headerElement = [
+      "item",
+      "description",
+      "par level",
+      "quantity on hand",
+      "",
+      "",
+    ];
+
+    return headerElement.map((title, index) => {
+      return <th key={index}>{title.toUpperCase()}</th>;
+    });
+  };
+
+  const renderBody = () => {
+    return meds.map((med, idx) => {
+      return (
+        <tr key={med.id}>
+          <td>{idx + 1}</td>
+          <td>{med.description}</td>
+          <td className="par-level">{med.par_level}</td>
+          <td className="quantity">{med.quantity_on_hand}</td>
+          <td className="delete-button">
+            <DeleteMed
+              deviceId={deviceId}
+              medicationId={med.id}
+              meds={meds}
+              setMeds={setMeds}
+            />
+          </td>
+          <td className="edit-button">
+            <Link to={`/${deviceId}/edit/${med.id}`}>
+              <button>Edit</button>
+            </Link>
+          </td>
+        </tr>
+      );
+    });
+```
+This is my first time creating a table. When I was thinking about it I thought it was hard. But just referencing it to the source below, it wasn't that bad.
 
 ## Code Issues & Resolutions
 
-> Use this section to list of all major issues encountered and their resolution.
+- Association Type Mismatch Error. I had to change my association between two tables to resolve the issue.
+- `Warning: A component is changing a controlled input of type text to be uncontrolled. Input elements should not switch from controlled to uncontrolled (or vice versa). Decide between using a controlled or uncontrolled input element for the lifetime of the component.` To solve this, I had to add a spread operator on my setter inside the handlechange function.
+- Accessing IDs since I have nested URLs. This was tricky but it's just a matter of using props and useParams.
 
 ## Sources
 
