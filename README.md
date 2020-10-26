@@ -183,3 +183,5 @@ This is my first time creating a table. When I was thinking about it I thought i
 ## Sources
 
 https://dev.to/abdulbasit313/learn-how-to-create-react-js-table-with-hooks-that-has-delete-functionality-too-2jjb (For creating the table)
+
+https://css-tricks.com/responsive-data-tables/ (For making the table responsive)

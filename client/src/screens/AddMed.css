@@ -11,7 +11,7 @@ input {
   padding: 10px;
 }
 
-.add-button {
+.add-button-form {
   margin-left: 10px;
 }
 
@@ -33,13 +33,13 @@ input {
 }
 
 @media all and (min-width: 480px) and (max-width: 768px) {
-  .add-button {
+  .add-button-form {
     margin-left: 10px;
   }
 }
 
 @media all and (max-width: 480px) {
-  .add-button {
+  .add-button-form {
     margin-left: 10px;
   }
 }

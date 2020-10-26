@@ -11,7 +11,7 @@ input {
   padding: 10px;
 }
 
-.edit-button {
+.edit-button-form {
   margin-left: 10px;
   padding-left: 10px;
 }
@@ -34,15 +34,15 @@ input {
 }
 
 @media all and (min-width: 480px) and (max-width: 768px) {
-  .edit-button {
+  .edit-button-form {
     margin-left: 10px;
     padding-left: 10px;
   }
 }
 
 @media all and (max-width: 480px) {
-  .edit-button {
+  .edit-button-form {
     margin-left: 10px;
-    padding-left: 25px;
+    padding-left: 10px;
   }
 }

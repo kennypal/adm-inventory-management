@@ -114,8 +114,15 @@ th:last-child {
 }
 
 @media all and (max-width: 480px) {
+  button {
+    font-size: 15px;
+  }
   select {
     font-size: 20px;
+  }
+
+  table {
+    font-size: 15px;
   }
 
   table,
@@ -141,7 +148,7 @@ th:last-child {
     /* border: none; */
     /* border-bottom: 1px solid #eee; */
     position: relative;
-    padding-left: 47%;
+    padding-left: 50%;
   }
 
   td:before {
@@ -180,7 +187,7 @@ th:last-child {
   }
 
   .edit-button {
-    padding-right: 27px;
+    padding-right: 25px;
     text-align: right;
   }
   
