@@ -2,7 +2,7 @@ import React from 'react'
 import { destroyMedFromDevice } from '../services/medications'
 
 export default function DeleteMed(props) {
-  const { deviceId, medicationId, meds, setMeds } = props
+  const { deviceId, medicationId, setMeds } = props
 
   const deleteMed = async (deviceId, medicationId) => {
     await destroyMedFromDevice(deviceId, medicationId)

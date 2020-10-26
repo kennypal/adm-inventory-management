@@ -5,7 +5,7 @@ import { getAllMedsFromDevice } from "./../services/medications";
 import DeleteMed from "./DeleteMed";
 import "./Table.css";
 
-export default function Table(props) {
+export default function Table() {
   const [devices, setDevices] = useState([]);
   const [deviceId, setDeviceId] = useState(null);
   const [meds, setMeds] = useState([]);
